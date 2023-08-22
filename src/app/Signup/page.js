@@ -1,9 +1,11 @@
 "use client"
 import localFont from "next/font/local";
 import React, { useState } from 'react';
-import signupApi from '../api/signup'; 
+import signupApi from '../apisign/signup'; 
 import Background from '@/components/background/Background';
 import Link from "next/link";
+import GoogleButton from "react-google-button";
+import { signIn } from "next-auth/react";
 
 const lun = localFont({ src: "/lunema-regular.ttf" });
 const me = localFont({ src: "/MonumentExtended-Ultrabold.otf" });
@@ -17,6 +19,10 @@ const signins = [
 ]
 
 const Signup = () => {
+  const handleGoogleSignIn = () => {
+    signIn('google');
+  };
+
   const handleSignup = async (event) => {
     event.preventDefault();
     const data = {
@@ -119,6 +125,11 @@ const Signup = () => {
         <div class="flex flex-col items-center">
           <hr class="w-full border-t border-black my-5"/>
           <div class={`my-1`}>
+            {/* <GoogleButton onClick={() => signIn('google')} class={`mx-auto mt-16`}/> */}
+            <div>
+      {/* Your other sign-up form fields */}
+      <button class={`${lun.className} border border-gray-500 w-full bg-white text-black py-2 rounded-lg mb-2`} onClick={handleGoogleSignIn}>Sign up with Google</button>
+    </div>
             <button class={`${lun.className} border border-gray-500 w-full bg-white text-black py-2 rounded-lg mb-2`}>
               <div class={`flex justify-center`}>
                 <img src="google.svg" alt="google" class="h-5 w-5 md:h-6 md:w-6 mx-2" />

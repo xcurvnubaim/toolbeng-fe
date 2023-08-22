@@ -6,8 +6,8 @@ import Image from "next/image";
 import Button from "public/darrell/Button.svg";
 import pana from "public/darrell/pana.svg";
 import FormCar from "@/components/formCar/FormCar";
-import orderPost from "@/api/order";
-import API_BASE_URL from '@/api/const';
+import orderPost from "@/apiorder/order";
+import API_BASE_URL from '@/apiorder/const';
 import Background from "@/components/background/Background";
 import Link from "next/link";
 

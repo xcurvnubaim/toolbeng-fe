@@ -406,7 +406,7 @@ const HomePage = () => {
         <div class={`text-rSize flex justify-center ${me.className}`}>Got any questions?</div>
         <div class={`text-sSize flex justify-center ${lun.className}`}>Get in touch with Toolbeng team and we will help you as soon as we can.</div>
         <div class={`flex justify-center`}>
-          <a href="#" class={`bg-transparent text-mSize m-5 px-4 py-2 border border-black text-black rounded hover:bg-black hover:text-white ${lun.className}`}>Contact</a>
+          <Link href="/Contact" class={`bg-transparent text-mSize m-5 px-4 py-2 border border-black text-black rounded hover:bg-black hover:text-white ${lun.className}`}>Contact</Link>
         </div>
         </div>
 
