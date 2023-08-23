@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SigninApi from '../apisign/signin'; 
 import Background from '@/components/background/Background';
 import Link from "next/link";
+import SigninButton from "@/components/SigninButton";
 
 const lun = localFont({ src: "/lunema-regular.ttf" });
 const me = localFont({ src: "/MonumentExtended-Ultrabold.otf" });
@@ -78,7 +79,7 @@ const Signin = () => {
             <button class={`${lun.className} border border-gray-500 w-full bg-white text-black py-2 rounded-lg mb-2`}>
               <div class={`flex justify-center`}>
                 <img src="google.svg" alt="google" class="h-5 w-5 md:h-6 md:w-6 mx-2" />
-                Continue With Google
+                <SigninButton/>
               </div>
             </button>
             <button class={`${lun.className} border border-gray-500 w-full bg-white text-black py-2 rounded-lg`}>
